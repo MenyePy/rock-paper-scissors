@@ -1,0 +1,88 @@
+* {
+    background-color: #1B1b1b;
+    color: #ff7b00;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-height: 100%;
+}
+
+.main {
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game {
+    /* border: 1px solid #fff; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.padding {
+    margin-top: 10%;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    margin-bottom: 50px;
+}
+
+#buttons {
+    /* border: 1px solid #fff; */
+    display: flex;
+    justify-content: space-around;
+    width: 800px;
+}
+
+#buttons * {
+    font-size: 100px;
+    padding: 50px;
+    border: 5px solid #ff7b00;
+}
+
+#buttons *:hover {
+    border: 7px solid orange;
+}
+
+.status {
+    font-size: 36px;
+}
+
+.result {
+    font-size: 48px;
+}
+
+.result div {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.scores {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restartBtn{
+    padding: 20px 40px;
+    border: 2px solid #ff7b00;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.credit {
+    font-size: 16px;
+}
+
+.credit span{
+    color: green;
+}

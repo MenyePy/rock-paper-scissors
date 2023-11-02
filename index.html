@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="status">Not playing</div>
-    <div class="result">Click to play!</div>
-    <div id="buttons">
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
-    </div>
-    <div class="scores">
-        <div class="user">Your Score: <span>0</span></div>
-        <div class="computer">Computer Score: <span>0</span></div>
+    <div class="main">
+        <div class="padding">
+            <div class="game">
+                <div class="text">
+                    <div class="status">Not playing</div>
+                    <div class="result pulsate">Click to play!</div>
+                </div>
+                <div id="buttons">
+                    <button class="rock">✊</button>
+                    <button class="paper">🤚</button>
+                    <button class="scissors">✌️</button>
+                </div>
+                <div class="scores">
+                    <div class="user">Your Score: <span>0</span>/5</div>
+                    <div class="computer">Computer Score: <span>0</span>/5</div>
+                    <button class="restartBtn">Restart</button>
+                </div>
+                
+                <p class="credit">Made by <span>Menye</span></p>
+            </div>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
