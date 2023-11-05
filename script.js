@@ -2,10 +2,13 @@ const resultDiv = document.querySelector('.result');
 const userScore = document.querySelector('.user');
 const computerScore = document.querySelector('.computer');
 const stat = document.querySelector('.status');
+const winScoreIndicator = document.querySelector('.addtext');
 let user = 0;
 let computer = 0;
 let winScore = 5;
 let play = true;
+
+winScoreIndicator.textContent = winScore;
 
 function getComputerChoice(){
     let list = ["rock", "paper", "scissors"];
@@ -79,6 +82,28 @@ function game(){
     }
 }
 
+function increaseRound(){
+    if (winScore < 20){
+        if (winScore > user && winScore > computer){
+            winScore++;
+        }
+    }
+    winScoreIndicator.textContent = winScore;
+    userScore.lastElementChild.textContent = winScore;
+    computerScore.lastElementChild.textContent = winScore;
+}
+
+function decreaseRound(){
+    if (winScore > 2){
+        if (winScore > user && winScore > computer){
+            winScore--;
+        }
+    }
+    winScoreIndicator.textContent = winScore;
+    userScore.lastElementChild.textContent = winScore;
+    computerScore.lastElementChild.textContent = winScore;
+}
+
 const rockBtn = document.querySelector('.rock');
 const scissorBtn = document.querySelector('.scissors');
 const paperBtn = document.querySelector('.paper');
@@ -115,3 +140,9 @@ restartBtn.addEventListener('click', () => {
     resultDiv.textContent = "Click to play!";
     stat.textContent = "Not playing"
 });
+
+const increaseBtn = document.querySelector('.plus');
+const decreaseBtn = document.querySelector('.minus');
+
+increaseBtn.addEventListener('click', increaseRound);
+decreaseBtn.addEventListener('click', decreaseRound);
